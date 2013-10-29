@@ -55,3 +55,6 @@ gem 'refinerycms-acts-as-indexed', '~> 1.0.0'
 #  gem 'refinerycms-inquiries', '~> 2.1.0'
 #  gem 'refinerycms-search', '~> 2.1.0'
 #  gem 'refinerycms-page-images', '~> 2.1.0'
+
+#gem 'refinerycms-page-videojs', github: 'bbtfr/refinerycms-page-videojs'
+gem 'refinerycms-i18n', github: 'refinery/refinerycms-i18n', branch: '2-1-stable'

@@ -1,3 +1,12 @@
+GIT
+  remote: git://github.com/refinery/refinerycms-i18n.git
+  revision: a234cca1f3048ecf975a1bd236d7f91a83f3fea2
+  branch: 2-1-stable
+  specs:
+    refinerycms-i18n (2.1.0)
+      rails-i18n (~> 0.7.3)
+      routing-filter (~> 0.3.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -156,9 +165,6 @@ GEM
       will_paginate (~> 3.0.2)
     refinerycms-dashboard (2.1.0)
       refinerycms-core (= 2.1.0)
-    refinerycms-i18n (2.1.0)
-      rails-i18n (~> 0.7.3)
-      routing-filter (~> 0.3.0)
     refinerycms-images (2.1.0)
       dragonfly (~> 0.9.14)
       refinerycms-core (= 2.1.0)
@@ -218,6 +224,7 @@ DEPENDENCIES
   rails (= 3.2.14)
   refinerycms (~> 2.1.0)
   refinerycms-acts-as-indexed (~> 1.0.0)
+  refinerycms-i18n!
   sass-rails (~> 3.2.3)
   sqlite3
   therubyracer
