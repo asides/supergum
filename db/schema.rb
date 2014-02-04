@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131008070626) do
+ActiveRecord::Schema.define(:version => 20140203212603) do
 
   create_table "refinery_images", :force => true do |t|
     t.string   "image_mime_type"
@@ -26,10 +26,10 @@ ActiveRecord::Schema.define(:version => 20131008070626) do
 
   create_table "refinery_page_part_translations", :force => true do |t|
     t.integer  "refinery_page_part_id"
-    t.string   "locale"
-    t.text     "body"
+    t.string   "locale",                :null => false
     t.datetime "created_at",            :null => false
     t.datetime "updated_at",            :null => false
+    t.text     "body"
   end
 
   add_index "refinery_page_part_translations", ["locale"], :name => "index_refinery_page_part_translations_on_locale"
@@ -49,13 +49,13 @@ ActiveRecord::Schema.define(:version => 20131008070626) do
 
   create_table "refinery_page_translations", :force => true do |t|
     t.integer  "refinery_page_id"
-    t.string   "locale"
+    t.string   "locale",           :null => false
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
     t.string   "title"
     t.string   "custom_slug"
     t.string   "menu_title"
     t.string   "slug"
-    t.datetime "created_at",       :null => false
-    t.datetime "updated_at",       :null => false
   end
 
   add_index "refinery_page_translations", ["locale"], :name => "index_refinery_page_translations_on_locale"
@@ -136,6 +136,30 @@ ActiveRecord::Schema.define(:version => 20131008070626) do
 
   add_index "refinery_users", ["id"], :name => "index_refinery_users_on_id"
   add_index "refinery_users", ["slug"], :name => "index_refinery_users_on_slug"
+
+  create_table "refinery_video_files", :force => true do |t|
+    t.string   "file_name"
+    t.integer  "file_size"
+    t.string   "file_ext"
+    t.string   "file_uid"
+    t.string   "file_mime_type"
+    t.integer  "video_id"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+    t.string   "external_url"
+    t.boolean  "use_external"
+  end
+
+  create_table "refinery_videos", :force => true do |t|
+    t.integer  "position"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.string   "config"
+    t.string   "title"
+    t.integer  "poster_id"
+    t.boolean  "use_shared"
+    t.text     "embed_tag"
+  end
 
   create_table "seo_meta", :force => true do |t|
     t.integer  "seo_meta_id"

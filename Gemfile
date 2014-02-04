@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.14'
+gem 'rails', '3.2.16'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -10,7 +10,7 @@ group :development, :test do
   gem 'sqlite3'
 
   # Deploy with Capistrano
-  gem 'capistrano'
+  gem 'capistrano', '~> 2.x.x'
   gem 'capistrano-rbenv'
 end
 
@@ -47,7 +47,7 @@ gem 'puma';
 # gem 'debugger'
 
 # Refinery CMS
-gem 'refinerycms', '~> 2.1.0'
+gem 'refinerycms', '~> 2.1.1'
 
 # Optionally, specify additional Refinery CMS Extensions here:
 gem 'refinerycms-acts-as-indexed', '~> 1.0.0'
@@ -55,6 +55,6 @@ gem 'refinerycms-acts-as-indexed', '~> 1.0.0'
 #  gem 'refinerycms-inquiries', '~> 2.1.0'
 #  gem 'refinerycms-search', '~> 2.1.0'
 #  gem 'refinerycms-page-images', '~> 2.1.0'
-
-#gem 'refinerycms-page-videojs', github: 'bbtfr/refinerycms-page-videojs'
+gem 'refinerycms-ckeditor', github: 'botandrose/refinerycms-ckeditor'
+#gem 'refinerycms-videojs', github: 'adexin-team/refinerycms-videojs'
 gem 'refinerycms-i18n', github: 'refinery/refinerycms-i18n', branch: '2-1-stable'
