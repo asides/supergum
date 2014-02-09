@@ -1,0 +1,17 @@
+/ .navbar.navbar-fixed-top
+/   .navbar-inner
+/     .container
+/       a.btn.btn-navbar data-toggle="collapse" data-target=".nav-collapse"
+/         span.icon-bar
+/         span.icon-bar
+/         span.icon-bar
+/       a.brand href="#"
+/       	= Refinery::Core::site_name
+.row
+	.col-md-3
+		= link_to image_tag("logo.jpg"), refinery.root_path
+	.col-md-9.center
+		= main_menu.to_html
+/ h1#logo
+/   = link_to Refinery::Core.site_name, refinery.root_path
+/ = main_menu.to_html

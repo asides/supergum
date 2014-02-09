@@ -58,3 +58,8 @@ gem 'refinerycms-acts-as-indexed', '~> 1.0.0'
 gem 'refinerycms-ckeditor', github: 'botandrose/refinerycms-ckeditor'
 #gem 'refinerycms-videojs', github: 'adexin-team/refinerycms-videojs'
 gem 'refinerycms-i18n', github: 'refinery/refinerycms-i18n', branch: '2-1-stable'
+
+gem 'slim-rails'
+gem 'less-rails'
+#gem 'kube-rails'
+gem 'bootstrap-sass', '~> 3.0.3.0'
